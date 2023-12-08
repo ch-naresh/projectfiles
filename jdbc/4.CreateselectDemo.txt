@@ -1,0 +1,32 @@
+4.Demonstrate how to create, select, and drop a database in JDBC.
+package pack1;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JdbcConn {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/employeedb","root","hyderabad@12");
+		System.out.println("connected successfully");
+		 String s = "select * from Emp";
+		 String s1 = "INSERT INTO Emp VALUES(105,'rgv',12/5/1999)";
+		 String s3 = "UPDATE Emp SET ename='rohan' WHERE empno=103";
+		 String s4 = "DROP DATABASE World";
+		 Statement stmt = conn.CreateStatement();
+		 
+		 System.out.println("employee table displayed");
+		 stmt.execute(s1);
+		 System.out.println("inserted one record");
+		 stmt.execute(s3);
+		 System.out.println("record updated");
+		 stmt.execute(s4);
+		 System.out.println("deleted database");
+}
+}
+			

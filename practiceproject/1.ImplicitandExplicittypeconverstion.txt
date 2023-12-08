@@ -1,0 +1,31 @@
+ 1.Write a program in Java to perform implicit and explicit type casting
+
+
+package pack1;
+
+public class Typeconversion {
+
+	public static void main(String[] args) {
+		int i =30;
+	   float f= i;
+	   System.out.println("Implicit type converstion");
+	   System.out.println("integer value : " +i);
+	   System.out.println("float value :" +f);
+	   double d=30.99;
+	   int n = (int)d;
+	   System.out.println("Explicit type conversion");
+	   System.out.println("double value :"+d);
+	   System.out.println("integer value :" +n);
+	   
+
+	}
+
+}
+output:
+Implicit type converstion
+integer value : 30
+float value :30.0
+Explicit type conversion
+double value :30.99
+integer value :30
+

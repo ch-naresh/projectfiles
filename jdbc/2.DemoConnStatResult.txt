@@ -1,0 +1,46 @@
+	
+2.Demonstrate Connection, Statement, and ResultSet in JDBC.
+package jdbcdemo;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class InsertQuerySimple {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		// Load the DB
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		// Connect the DB
+		String dburl = "jdbc:mysql://localhost:3306/Emp";
+		String username = "root";
+		String password = "hyderabad@12";
+		Connection conn = DriverManager.getConnection(dburl, username, password);
+		System.out.println("Succesfully connected");
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		Connection con = null;
+
+		// String query = "select * from movies";
+		String query = "INSERT INTO Emp VALUES(empno,'ename',hiredate)";
+
+		// send query to the DB
+
+		Statement stmt = conn.createStatement();
+
+		stmt.executeUpdate(query);
+                //Result statement
+
+		ResultSet rs = stmt.executeQuery(query);
+
+		System.out.println("Recoreds inserted successfully");
+
+		conn.close();
+
+	}
+}
+output:
+Successfully connected
+Records inserted successfully

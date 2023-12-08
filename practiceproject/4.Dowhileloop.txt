@@ -1,0 +1,29 @@
+4.Write a program to demonstrate the do while loop
+package pack1;
+
+public class DOwhilelop {
+
+	public static void main(String[] args) {
+		int i= 0;
+		System.out.println("do while loop");
+		do
+		{
+			System.out.println("iteration i=" +i);
+			i++;
+		}while(i<=9);
+
+	}
+
+}
+output:
+do while loop
+iteration i=0
+iteration i=1
+iteration i=2
+iteration i=3
+iteration i=4
+iteration i=5
+iteration i=6
+iteration i=7
+iteration i=8
+iteration i=9
