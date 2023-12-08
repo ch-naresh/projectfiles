@@ -1,0 +1,30 @@
+5.Write a program to demonstrate the for loop
+package pack1;
+
+public class Forloop {
+
+	public static void main(String[] args) {
+		System.out.println("for loop demonstration");
+	
+		for( int i=0;i<=11;i++)
+		{
+			System.out.println("Iteration i = " +i);
+		}
+
+	}
+
+}
+output:
+for loop demonstration
+Iteration i = 0
+Iteration i = 1
+Iteration i = 2
+Iteration i = 3
+Iteration i = 4
+Iteration i = 5
+Iteration i = 6
+Iteration i = 7
+Iteration i = 8
+Iteration i = 9
+Iteration i = 10
+Iteration i = 11

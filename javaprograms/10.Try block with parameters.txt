@@ -1,0 +1,22 @@
+10.Writing code for a try block with parameters
+
+public class Tryblock {
+	public static void main(String[] args) {
+               int dividend = 20;
+		int divisor = 2;
+	try {
+		int result = divide(dividend,divisor);
+		System.out.println(result);
+	    }
+	catch (ArithmeticException e) {
+		System.out.println("an arithmetic exception");
+	    }
+        }
+       public static int divide(int dividend, int divisor) {
+            if (divisor ==0) {
+			throw new ArithmeticException("cannot divide by zero");
+		}
+		return dividend/divisor;
+}
+}
+		
